@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{block "title"}{/block}</title>
+    <link rel="stylesheet" href="{$URLBASE}/static/css/styles.css">
+    <link rel="stylesheet" href="{$URLBASE}/static/css/form_login.css">
+    {block "css"}{/block}
+</head>
+<body>
+<div class="content-page">
+    <header>
+        <h1><a href="" class="title-page">STLAB</a></h1>
+        <div class="btn-menu"><img src="{$URLBASE}/static/images/icon-menu.png"></div>
+        <div class="menu">
+            <a href="">inicio</a>
+            {if $USER == "NONE"}
+                {include file="form_login.html"}
+            {else}
+            {/if}
+        </div>
+    </header>
+
+
+</div>
+<script src="{$URLBASE}/static/js/scripts.js"></script>
+{block "js"}{/block}
+</body>
+</html>
