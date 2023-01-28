@@ -1,0 +1,53 @@
+.form-publicar {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: right;
+    padding: 1em;
+    background: #eee;
+}
+.form-publicar input,select {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 1em;
+    border: .1px solid #222;
+    margin-block-end: .5em;
+    outline: 0;
+}
+
+.bbcode {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    padding: .5em;
+    background: #111;
+}
+.bbcode a {
+    position: relative;
+    display: inline-block;
+    padding-inline: 1em;
+    padding-block: .5em;
+    border: .1px solid #351;
+    text-decoration: none;
+    font-size: 11px;
+    color: #fff;
+}
+
+.content {
+    position: relative;
+    display: block;
+    width: 100%; height: 500px;
+    padding: 1em;
+    border: .1px solid #222;
+    outline: 0;
+    resize: none;
+}
+
+.form-publicar button {
+    position: relative;
+    padding-inline: 1em;
+    padding-block: .5em;
+    margin-block: 1em;
+}
