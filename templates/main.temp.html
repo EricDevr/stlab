@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{$URLBASE}/static/css/styles.css">
     <link rel="stylesheet" href="{$URLBASE}/static/css/form_login.css">
     {block "css"}{/block}
+    <link rel="stylesheet" href="{$URLBASE}/static/css/aside.css">
 </head>
 <body>
 <div id="fb-root"></div>
@@ -31,9 +32,11 @@
         <section class="left">
             {block "left"}{/block}
         </section>
-        <section class="right">right</section>
+        <section class="right">
+            {include file="aside.html"}
+        </section>
     </section>
-    <section class="down">down</section>
+    <section class="down">{block "down"}{/block}</section>
 
 </div>
 <script src="{$URLBASE}/static/js/scripts.js"></script>

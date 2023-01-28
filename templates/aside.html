@@ -1,0 +1,9 @@
+<section class="aside">
+<h2>Entretenimiento</h2>
+{foreach $POSTSASIDE as $post}
+<a href="{$URLBASE}/post/{$post.id}/{$post.title}/" class="post-aside">
+<img src="{$URLBASE}/static/images/{$post.image}">
+<h3>{$post.title|replace:"-":" "}</h3>
+</a>
+{/foreach}
+</section>

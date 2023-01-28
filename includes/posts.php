@@ -33,6 +33,31 @@ function ob_post($id) {
     return $result;
 }
 
+function ob_m_views() {
+    global $mysqli;
+    $stmt = $mysqli->prepare("SELECT id,category,user,image,title,date FROM posts ORDER BY views DESC LIMIT 4");
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $posts = array();
+    while($post = $result->fetch_array()) {
+        $post["date"] = ob_tiempo_transcurrido($post["date"]);
+        $posts[] = $post;
+    }
+    return $posts;
+}
+
+function ob_posts_aside() {
+    global $mysqli;
+    $stmt = $mysqli->prepare("SELECT id,category,image,title,date FROM posts WHERE category='Entretenimiento' ORDER BY views DESC LIMIT 6");
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $posts = array();
+    while($post = $result->fetch_array()) {
+        $post["date"] = ob_tiempo_transcurrido($post["date"]);
+        $posts[] = $post;
+    }
+    return $posts;
+}
 
 function ob_tiempo_transcurrido($post_date) {
   $tiempo_post = new DateTime($post_date);
