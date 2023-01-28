@@ -4,4 +4,6 @@ $portada = ob_portada();
 $smarty->assign("PORTADA", $portada);
 
 $smarty->display("home/index.html");
+
+// mensaje
 ?>
