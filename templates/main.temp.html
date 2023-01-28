@@ -14,7 +14,7 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="iAQLY8YN"></script>
 <div class="content-page">
     <header>
-        <h1><a href="" class="title-page">STLAB</a></h1>
+        <h1><a href="{$URLBASE}/" class="title-page">STLAB</a></h1>
         <div class="btn-menu"><img src="{$URLBASE}/static/images/icon-menu.png"></div>
         <div class="menu">
             <a href="{$URLBASE}/">inicio</a>
@@ -22,6 +22,7 @@
                 {include file="form_login.html"}
             {else}
             <a href="{$URLBASE}/publicar/">{$USER}</a>
+            <a href="{$URLBASE}/logout/">logout</a>
             {/if}
         </div>
     </header>

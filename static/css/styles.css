@@ -59,7 +59,7 @@ header {
     display: none;
     width: 300px;
     background-color: #333;
-    top: 100%; right: 0px;
+    top: 100%; right: 1em;
     z-index: 1;
 }
 .menu a {

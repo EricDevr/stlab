@@ -5,6 +5,7 @@
     text-align: right;
     padding-inline: 1em;
     background-color: #fff;
+    border: .1px solid #222;
 }
 .form-login h3 {
     position: relative;
@@ -20,6 +21,7 @@
     padding: 1em;
     margin-block-end: .5em;
     border: .1px solid #222;
+    outline: 0;
 }
 .form-login button {
     position: relative;

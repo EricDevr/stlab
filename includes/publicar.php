@@ -1,4 +1,5 @@
 <?php
+require_once("app.php");
 require_once("db_connection.php");
 
 $image = $_FILES["image"];
@@ -14,7 +15,12 @@ if(empty($image["name"]) or empty($title) or empty($content)) {
     } else {
         $title = str_replace(" ","-",$title);
         $content = htmlspecialchars($content);
+
         
+        $car = array("&lt;","&gt;","&quot;");
+        $rem = array("<",">","\"");
+
+        $content = str_replace($car, $rem, $content);
         $result = upload_post($user,$img,$title,$content);
         if($result == "success") {
             echo "success";
