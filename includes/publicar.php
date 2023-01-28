@@ -2,6 +2,7 @@
 require_once("app.php");
 require_once("db_connection.php");
 
+$category = $_POST["category"];
 $image = $_FILES["image"];
 $title = $_POST["title"];
 $content = $_POST["content"];
@@ -21,7 +22,7 @@ if(empty($image["name"]) or empty($title) or empty($content)) {
         $rem = array("<",">","\"");
 
         $content = str_replace($car, $rem, $content);
-        $result = upload_post($user,$img,$title,$content);
+        $result = upload_post($category,$user,$img,$title,$content);
         if($result == "success") {
             echo "success";
         }else {
@@ -43,10 +44,10 @@ function upload_image($title,$image) {
     }
 }
 
-function upload_post($user,$image,$title,$content) {
+function upload_post($category,$user,$image,$title,$content) {
     global $mysqli;
-    $stmt = $mysqli->prepare("INSERT INTO posts(image,user,title,content)VALUES(?,?,?,?)");
-    $stmt->bind_param("ssss", $image, $user, $title, $content);
+    $stmt = $mysqli->prepare("INSERT INTO posts(category,image,user,title,content)VALUES(?,?,?,?,?)");
+    $stmt->bind_param("sssss", $category, $image, $user, $title, $content);
     $stmt->execute();
     $stmt->get_result();
     if($stmt->error) {

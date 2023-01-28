@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-01-28 01:03:13
+/* Smarty version 4.3.0, created on 2023-01-28 17:05:04
   from '/storage/emulated/0/htdocs/stlab/templates/publicar/form.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_63d46641ed5a20_65417839',
+  'unifunc' => 'content_63d57ff0788910_27575040',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '327a6a8cc0447a7fd0cf2d2dc23a08810e4d9dfa' => 
     array (
       0 => '/storage/emulated/0/htdocs/stlab/templates/publicar/form.html',
-      1 => 1674864151,
+      1 => 1674936282,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63d46641ed5a20_65417839 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63d57ff0788910_27575040 (Smarty_Internal_Template $_smarty_tpl) {
 ?><form method="POST" enctype="multipart/form-data" class="form-publicar">
+    <select name="category">
+        <option value="Internet">Internet</option>
+        <option value="Tecnología">Tecnología</option>
+        <option value="Entretenimiento">Entretenimiento</option>
+    </select>
     <input type="file" name="image">
     <input type="title" name="title" placeholder="Titulo">
     <div>

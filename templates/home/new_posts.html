@@ -2,7 +2,7 @@
 <section class="new-posts">
 {foreach $NEW_POSTS as $post}
     <a href="{$URLBASE}/post/{$post.id}/{$post.title}/" class="new-post">
-        <span>{$post.date}</span>
+        <span>{$post.date} {$post.category}</span>
         <img src="{$URLBASE}/static/images/{$post.image}">
         <h4>{$post.title|replace:"-":" "}</h4>
     </a>

@@ -96,9 +96,8 @@ header {
     }
     
     .menu {
-        width: 95%;
-        left: 0;
-        margin-inline: auto;
+        right: 0;
+        width: 100%;
         border: .1px solid #222;
     }
 }

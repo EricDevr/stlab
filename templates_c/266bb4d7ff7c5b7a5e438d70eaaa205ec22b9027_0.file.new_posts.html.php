@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-01-28 13:46:34
+/* Smarty version 4.3.0, created on 2023-01-28 17:14:43
   from '/storage/emulated/0/htdocs/stlab/templates/home/new_posts.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_63d5516ab0d147_78684692',
+  'unifunc' => 'content_63d582339ce038_58595250',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '266bb4d7ff7c5b7a5e438d70eaaa205ec22b9027' => 
     array (
       0 => '/storage/emulated/0/htdocs/stlab/templates/home/new_posts.html',
-      1 => 1674924392,
+      1 => 1674936862,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63d5516ab0d147_78684692 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63d582339ce038_58595250 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/storage/emulated/0/htdocs/stlab/includes/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 <h2 class="title-sec">Post Recientes</h2>
@@ -36,6 +36,7 @@ $_smarty_tpl->tpl_vars['post']->do_else = false;
 /<?php echo $_smarty_tpl->tpl_vars['post']->value['title'];?>
 /" class="new-post">
         <span><?php echo $_smarty_tpl->tpl_vars['post']->value['date'];?>
+ <?php echo $_smarty_tpl->tpl_vars['post']->value['category'];?>
 </span>
         <img src="<?php echo $_smarty_tpl->tpl_vars['URLBASE']->value;?>
 /static/images/<?php echo $_smarty_tpl->tpl_vars['post']->value['image'];?>

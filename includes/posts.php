@@ -3,7 +3,7 @@ require_once("db_connection.php");
 
 function ob_portada() {
     global $mysqli;
-    $stmt = $mysqli->prepare("SELECT id,image,title,date FROM posts ORDER BY date DESC LIMIT 1");
+    $stmt = $mysqli->prepare("SELECT id,category,image,title,date FROM posts ORDER BY date DESC LIMIT 1");
     $stmt->execute();
     $result = $stmt->get_result()->fetch_assoc();
     $result["date"] = ob_tiempo_transcurrido($result["date"]);
@@ -12,7 +12,7 @@ function ob_portada() {
 
 function ob_new_posts() {
     global $mysqli;
-    $stmt = $mysqli->prepare("SELECT id,image,title,date FROM posts ORDER BY date DESC LIMIT 1,10");
+    $stmt = $mysqli->prepare("SELECT id,category,image,title,date FROM posts ORDER BY date DESC LIMIT 1,10");
     $stmt->execute();
     $posts = array();
     $result = $stmt->get_result();
