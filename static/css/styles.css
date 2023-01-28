@@ -83,7 +83,7 @@ header {
     position: relative;
     display: grid;
     width: 100%;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 60% 40%;
 }
 
 

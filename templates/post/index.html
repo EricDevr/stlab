@@ -1,0 +1,11 @@
+{extends "main.temp.html"}
+{block name="title"}title{/block}
+{block name="css"}
+<link rel="stylesheet" href="{$URLBASE}/static/css/post.css">
+{/block}
+
+{block name="left"}
+{include file="post/post.html"}
+{include file="post/comments.html"}
+
+{/block}

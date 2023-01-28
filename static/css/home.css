@@ -14,17 +14,66 @@
     position: relative;
     display: block;
     width: 100%;
+    font-size: 20px;
+    color: #222;
     padding-block: .5em;
 }
 .portada img {
     position: relative;
     display: block;
-    width: 100%;
+    width: 100%; max-height: 300px;
+    object-fit: cover;
 }
 
+.title-sec {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.new-posts {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 5px;
+    padding: 1em;
+}
+
+.new-post {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    background: #111;
+}
+.new-post span {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 10px;
+    color: #fff;
+    padding: .5em;
+}
+.new-post img {
+    position: relative;
+    display: block;
+    width: 100%; height: 100px;
+    object-fit: cover;
+}
+.new-posts h4 {
+    position: relative;
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: 1em;
+}
 
 @media (max-width: 800px) {
     .portada {
         padding: 1em;
+    }
+    .new-posts {
+        grid-template-columns: 1fr 1fr;
     }
 }
