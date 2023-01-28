@@ -60,6 +60,7 @@ header {
     width: 300px;
     background-color: #333;
     top: 100%; right: 0px;
+    z-index: 1;
 }
 .menu a {
     position: relative;
@@ -75,4 +76,29 @@ header {
 }
 .menu a:active {
     background-color: #069;
+}
+
+
+.up {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+}
+
+
+@media (max-width: 800px) {
+    .content-page {
+        width: 100%;
+    }
+    .up {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu {
+        width: 95%;
+        left: 0;
+        margin-inline: auto;
+        border: .1px solid #222;
+    }
 }

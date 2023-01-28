@@ -15,14 +15,22 @@
         <h1><a href="" class="title-page">STLAB</a></h1>
         <div class="btn-menu"><img src="{$URLBASE}/static/images/icon-menu.png"></div>
         <div class="menu">
-            <a href="">inicio</a>
+            <a href="{$URLBASE}/">inicio</a>
             {if $USER == "NONE"}
                 {include file="form_login.html"}
             {else}
+            <a href="{$URLBASE}/publicar/">{$USER}</a>
             {/if}
         </div>
     </header>
-
+    
+    <section class="up">
+        <section class="left">
+            {block "left"}{/block}
+        </section>
+        <section class="right">righr</section>
+    </section>
+    <section class="down">down</section>
 
 </div>
 <script src="{$URLBASE}/static/js/scripts.js"></script>

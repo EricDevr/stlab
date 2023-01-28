@@ -1,0 +1,30 @@
+.portada {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 2em;
+}
+.portada span {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 10px;
+}
+.portada h1 {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-block: .5em;
+}
+.portada img {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+
+@media (max-width: 800px) {
+    .portada {
+        padding: 1em;
+    }
+}

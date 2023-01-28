@@ -1,2 +1,9 @@
 {extends "main.temp.html"}
 {block name="title"}Inicio{/block}
+{block name="css"}
+<link rel="stylesheet" href="{$URLBASE}/static/css/home.css">
+{/block}
+
+{block name="left"}
+{include file="home/portada.html"}
+{/block}
