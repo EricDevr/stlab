@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-01-28 17:14:59
+/* Smarty version 4.3.0, created on 2023-01-29 18:37:35
   from '/storage/emulated/0/htdocs/stlab/templates/post/post.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_63d5824376ab33_16026359',
+  'unifunc' => 'content_63d6e71fbe7dc3_61331909',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a39906f914157279b57180b136ea23a2c4b34678' => 
     array (
       0 => '/storage/emulated/0/htdocs/stlab/templates/post/post.html',
-      1 => 1674936880,
+      1 => 1675027594,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63d5824376ab33_16026359 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63d6e71fbe7dc3_61331909 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/storage/emulated/0/htdocs/stlab/includes/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 <section class="post">
@@ -32,7 +32,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/storage/emulated/0/htdocs/s
 " class="portada">
 <h1 class="title-post"><?php echo smarty_modifier_replace($_smarty_tpl->tpl_vars['POST']->value['title'],"-"," ");?>
 </h1>
-<p class="content-post"><?php echo $_smarty_tpl->tpl_vars['POST']->value['content'];?>
-</p>
+<div class="content-post"><?php echo $_smarty_tpl->tpl_vars['POST']->value['content'];?>
+</div>
 </section><?php }
 }

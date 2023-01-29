@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-01-28 20:25:35
+/* Smarty version 4.3.0, created on 2023-01-29 18:26:53
   from '/storage/emulated/0/htdocs/stlab/templates/aside.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_63d5aeef024743_64330020',
+  'unifunc' => 'content_63d6e49d4cd354_17639801',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '859eafb1fca42aee48016db9862ae35a83eb336a' => 
     array (
       0 => '/storage/emulated/0/htdocs/stlab/templates/aside.html',
-      1 => 1674948332,
+      1 => 1675027593,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63d5aeef024743_64330020 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63d6e49d4cd354_17639801 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/storage/emulated/0/htdocs/stlab/includes/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
-?>
+if ($_smarty_tpl->tpl_vars['POSTSASIDE']->value != "NULL") {?>
 <section class="aside">
 <h2>Entretenimiento</h2>
 <?php
@@ -44,5 +44,7 @@ $_smarty_tpl->tpl_vars['post']->do_else = false;
 <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-</section><?php }
+</section>
+<?php }
+}
 }

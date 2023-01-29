@@ -102,3 +102,10 @@
     padding: 2em;
     background-color: #069;
 }
+
+
+@media (max-width: 800px) {
+    .content-form-u-image {
+        left: -300%;
+    }
+}

@@ -31,10 +31,15 @@
     word-break: break-word;
     margin: 0;
 }
-.content-post img {
+.content-post > img {
     position: relative;
     display: block;
     width: 100%;
+}
+.content-post > a {
+    position: relative;
+    font-weight: 900;
+    color: #945;
 }
 
 .comments {
@@ -47,6 +52,9 @@
 }
 
 @media (max-width: 800px) {
+    .post {
+        padding: 1em;
+    }
     .portada {
         width: 100%;
     }
