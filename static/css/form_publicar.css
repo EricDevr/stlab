@@ -6,7 +6,7 @@
     padding: 1em;
     background: #eee;
 }
-.form-publicar input,select {
+.form-publicar > input,select {
     position: relative;
     display: block;
     width: 100%;
@@ -24,7 +24,7 @@
     padding: .5em;
     background: #111;
 }
-.bbcode a {
+.btn {
     position: relative;
     display: inline-block;
     padding-inline: 1em;
@@ -34,6 +34,11 @@
     font-size: 11px;
     color: #fff;
 }
+.btn-upload-image {
+    position: relative;
+    display: inline-block;
+}
+
 
 .content {
     position: relative;
@@ -44,10 +49,56 @@
     outline: 0;
     resize: none;
 }
-
-.form-publicar button {
+#btn-publicar {
     position: relative;
     padding-inline: 1em;
     padding-block: .5em;
     margin-block: 1em;
+}
+
+
+
+
+.content-form-u-image {
+    position: absolute;
+    display: none;
+    width: 300px;
+    text-align: right;
+    color: #fff;
+    background-color: #444;
+    
+    z-index: 1;
+}
+.image-u {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 10px;
+    padding: 1em;
+}
+.name-u {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 10px;
+    padding: 1em;
+    border: 0;
+    outline: 0;
+}
+.btn-ui {
+    position: relative;
+    font-size: 10px;
+    padding-inline: 1em;
+    padding-block: .5em;
+    margin-block: .5em;
+    cursor: pointer;
+}
+.response {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 10px;
+    padding: 2em;
+    background-color: #069;
 }

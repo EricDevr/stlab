@@ -8,8 +8,14 @@
     <input type="title" name="title" placeholder="Titulo">
     <div>
         <span class="bbcode">
-            <a href=""><b>b</b></a>
-            <a href=""><i>i</i></a>
+            <a class="btn" href="javascript:bbcode('b')"><b>b</b></a>
+            <a class="btn" href="javascript:bbcode('i')"><i>i</i></a>
+            <a class="btn" href="javascript:bbcode('u')"><u>u</u></a>
+            <a class="btn" href="javascript:bbcode('h2')">T</a>
+            <div class="btn-upload-image">
+                <a class="btn" href="javascript:form_upload_image()">img</a>
+                {include file="publicar/form_upload_image.html"}
+            </div>
         </span>
         <textarea class="content" name="content" placeholder="Contenido"></textarea>
     </div>
