@@ -37,9 +37,9 @@
     }
 
     let conx;
+    const image = document.getElementById("image-u");
+    const name = document.getElementById("name-u");
     function upload_image() {
-        const image = document.getElementById("image-u");
-        const name = document.getElementById("name-u");
         const form = new FormData();
         form.append("image-u", image.files[0]);
         form.append("name-u",name.value);
@@ -50,9 +50,24 @@
         conx.send(form);
     }
     function success() {
-        const response = document.getElementsByClassName("response")[0];
+        const cont = document.getElementsByClassName("content-form-u-image")[0];
         if(conx.readyState == 4) {
-            response.innerHTML = conx.responseText;
+            const img = conx.responseText;
+            add_image(img);
+            image.value = "";
+            name.value = "";
+            cont.style.display = "none";
         }
+    }
+    function add_image(image_lnk) {
+        const textarea = document.getElementsByClassName("content")[0];
+        const ini = textarea.selectionStart;
+        const fin = textarea.selectionEnd;
+        const textini = textarea.value.substring(0, ini);
+        const textfin = textarea.value.substring(fin, textarea.value.length);
+        const image = "<img src=\""+image_lnk+"\">";
+        const new_text = textini + image + textfin;
+        textarea.value = new_text;
+        
     }
 }
