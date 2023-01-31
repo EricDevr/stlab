@@ -1,5 +1,3 @@
-//const URLBASE = "http://localhost/stlab";
-const URLBASE = "http://localhost:8003";
 {
     const btnmenu = document.getElementsByClassName("btn-menu")[0];
     btnmenu.addEventListener("click", () => {
