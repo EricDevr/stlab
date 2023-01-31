@@ -10,5 +10,11 @@ $smarty->assign("MV_POSTS", $m_views);
 $aside = ob_posts_aside();
 $smarty->assign("POSTSASIDE", $aside);
 
+$postsinternet = ob_posts_views_cate("Internet");
+$smarty->assign("POSTSVIEWSINTERNET", $postsinternet);
+
+$postsmisce = ob_posts_views_cate("Miscelaneos");
+$smarty->assign("POSTSVIEWSMISCE", $postsmisce);
+
 $smarty->display("post/index.html");
 ?>

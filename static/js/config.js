@@ -1,1 +1,1 @@
-const URLBASE = "http://localhost:8003";
+const URLBASE = "http://localhost/stlab";
