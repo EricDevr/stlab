@@ -1,5 +1,7 @@
 RewriteEngine On
 
+DirectoryIndex index.php
+Options +Indexes
 
 RewriteRule ^publicar/$ index.php?section=publicar
 RewriteRule ^post/(.*)/(.*)/$ index.php?section=post&id=$1&title=$2
