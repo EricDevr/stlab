@@ -1,8 +1,8 @@
 <?php
 require_once("config.php");
 $host = "localhost";
-$user = "root";
-$pass = "";
+$user = "stlab";
+$pass = "acoer1cstadb";
 $db_name = "stlab";
 $mysqli = new mysqli($host, $user, $pass, $db_name);
 if($mysqli->error) {

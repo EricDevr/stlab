@@ -1,7 +1,10 @@
 RewriteEngine On
 
 DirectoryIndex index.php
+<<<<<<< HEAD
 Options +Indexes
+=======
+>>>>>>> branch 'main' of https://github.com/EricDevr/stlab.git
 
 RewriteRule ^publicar/$ index.php?section=publicar
 RewriteRule ^post/(.*)/(.*)/$ index.php?section=post&id=$1&title=$2
