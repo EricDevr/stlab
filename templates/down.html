@@ -19,7 +19,7 @@
         <a href="{$URLBASE}/post/{$post.id}/{$post.title}/" class="post-down">
         <span>{$post.date} {$post.category}</span>
         <img src="{$URLBASE}/static/images/{$post.image}">
-        <h3>{$post.title|replace:"-":" "}</h3>
+        <h3>{$post.title|replace:"-":" "|truncate:50}</h3>
         </a>
         {/foreach}
     </section>
@@ -28,7 +28,7 @@
         <a href="{$URLBASE}/post/{$post.id}/{$post.title}/" class="post-down">
         <span>{$post.date} {$post.category}</span>
         <img src="{$URLBASE}/static/images/{$post.image}">
-        <h3>{$post.title|replace:"-":" "}</h3>
+        <h3>{$post.title|replace:"-":" "|truncate:50}</h3>
         </a>
         {/foreach}
     </section>

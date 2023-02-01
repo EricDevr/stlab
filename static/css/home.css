@@ -72,8 +72,13 @@
 @media (max-width: 800px) {
     .portada {
         padding: 1em;
+        border-block-end: .1px solid #222;
+    }
+    .title-sec {
+        padding-block: 1em;
     }
     .new-posts {
+        padding: 5px;
         grid-template-columns: 1fr 1fr;
     }
 }

@@ -62,7 +62,7 @@ function ob_posts_aside() {
 
 function ob_posts_views_cate($category) {
     global $mysqli;
-    $stmt = $mysqli->prepare("SELECT id,category,user,image,title,date FROM posts WHERE category=? ORDER BY views DESC LIMIT 4");
+    $stmt = $mysqli->prepare("SELECT id,category,user,image,title,date FROM posts WHERE category=? ORDER BY views DESC LIMIT 2");
     $stmt->bind_param("s", $category);
     $stmt->execute();
     $result = $stmt->get_result();

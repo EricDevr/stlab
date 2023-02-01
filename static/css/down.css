@@ -30,7 +30,7 @@
     position: relative;
     display: block;
     width: 100%;
-    font-size: 10px;
+    font-size: 8px;
     color: #fff;
     padding: .5em;
 }
@@ -64,7 +64,8 @@
     position: relative;
     display: grid;
     width: 100%;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1px;
     background-color: #069;
 }
 .views-ie > section {
@@ -72,7 +73,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1px;
-    padding: 1px;
 }
 .views-ie > section > .post-down {
     background-color: #058;
