@@ -46,6 +46,7 @@ header {
 }
 .btn-menu img {
     width: 60%;
+    filter: invert(100%);
 }
 .btn-menu:hover {
     background-color: #444;

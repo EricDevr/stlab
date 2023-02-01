@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-01-29 18:27:48
+/* Smarty version 4.3.0, created on 2023-01-31 22:45:01
   from '/storage/emulated/0/htdocs/stlab/templates/publicar/form.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_63d6e4d489e5b5_27040997',
+  'unifunc' => 'content_63d9c41d0cb098_97248279',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '327a6a8cc0447a7fd0cf2d2dc23a08810e4d9dfa' => 
     array (
       0 => '/storage/emulated/0/htdocs/stlab/templates/publicar/form.html',
-      1 => 1675027594,
+      1 => 1675215898,
       2 => 'file',
     ),
   ),
@@ -21,12 +21,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:publicar/form_upload_image.html' => 1,
   ),
 ),false)) {
-function content_63d6e4d489e5b5_27040997 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63d9c41d0cb098_97248279 (Smarty_Internal_Template $_smarty_tpl) {
 ?><form method="POST" enctype="multipart/form-data" class="form-publicar">
     <select name="category">
         <option value="Internet">Internet</option>
-        <option value="Tecnología">Tecnología</option>
         <option value="Entretenimiento">Entretenimiento</option>
+        <option value="Tecnología">Tecnología</option>
+        <option value="Miscelaneos">Miscelaneos</option>
     </select>
     <input type="file" name="image">
     <input type="title" name="title" placeholder="Titulo">

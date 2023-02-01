@@ -21,7 +21,7 @@
     display: block;
     width: 100%;
     font-size: 30px;
-    padding-block: 2em;
+    padding-block: 1em;
 }
 .content-post {
     position: relative;
@@ -53,9 +53,19 @@
 
 @media (max-width: 800px) {
     .post {
-        padding: 1em;
+        padding: 0em;
+    }
+    .date {
+        padding-inline: 3em;
     }
     .portada {
         width: 100%;
+    }
+    .title-post {
+        font-size: 25px;
+        padding-inline: .5em;
+    }
+    .content-post {
+        padding-inline: 1em;
     }
 }
