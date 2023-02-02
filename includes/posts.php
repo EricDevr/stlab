@@ -3,87 +3,65 @@ require_once("db_connection.php");
 
 function ob_portada() {
     global $mysqli;
-    $stmt = $mysqli->prepare("SELECT id,category,image,title,date FROM posts ORDER BY date DESC LIMIT 1");
-    $stmt->execute();
-    if($stmt->num_rows >= 1) {
-    $result = $stmt->get_result()->fetch_assoc();
-    $result["date"] = ob_tiempo_transcurrido($result["date"]);
-    return $result;
-    }
+    $query = "SELECT * FROM posts ORDER BY date DESC LIMIT 1";
+    $result = $mysqli->query($query);
+    $posts = $result->fetch_array();
+    $posts["date"] = ob_tiempo_transcurrido($posts["date"]);
+    return $posts;
+    $mysqli->close();
 }
 
 function ob_new_posts() {
     global $mysqli;
-    $stmt = $mysqli->prepare("SELECT id,category,image,title,date FROM posts ORDER BY date DESC LIMIT 1,10");
-    $stmt->execute();
+    $result = $mysqli->query("SELECT id,category,image,title,date FROM posts ORDER BY date DESC LIMIT 1,10");
     $posts = array();
-    if ($stmt->num_rows >= 1) {
-        $result = $stmt->get_result();
-        while ($post = $result->fetch_array()) {
-            $post["date"] = ob_tiempo_transcurrido($post["date"]);
-            $posts[] = $post;
-        }
-        return $posts;
+    while ($post = $result->fetch_array()) {
+        $post["date"] = ob_tiempo_transcurrido($post["date"]);
+        $posts[] = $post;
     }
+    return $posts;
 }
 
 function ob_post($id) {
     global $mysqli;
-    $stmt = $mysqli->prepare("SELECT * FROM posts WHERE id=? LIMIT 1");
-    $stmt->bind_param("i", $id);
-    $stmt->execute();
-    if (!$stmt->num_rows >= 1) {
-        $result = $stmt->get_result()->fetch_assoc();
-        $result["date"] = ob_tiempo_transcurrido($result["date"]);
-        return $result;
-    }
+    $result = $mysqli->query("SELECT * FROM posts WHERE id=$id LIMIT 1");
+    $post = $result->fetch_assoc();
+    $post["date"] = ob_tiempo_transcurrido($post["date"]);
+    return $post;
 }
 
 function ob_m_views() {
     global $mysqli;
-    $stmt = $mysqli->prepare("SELECT id,category,user,image,title,date FROM posts ORDER BY views DESC LIMIT 4");
-    $stmt->execute();
-    if ($stmt->num_rows >= 1) {
-        $result = $stmt->get_result();
-        $posts = array();
-        while ($post = $result->fetch_array()) {
-            $post["date"] = ob_tiempo_transcurrido($post["date"]);
-            $posts[] = $post;
-        }
-        return $posts;
+    $result = $mysqli->query("SELECT id,category,user,image,title,date FROM posts ORDER BY views DESC LIMIT 4");
+    $posts = array();
+    while ($post = $result->fetch_array()) {
+        $post["date"] = ob_tiempo_transcurrido($post["date"]);
+        $posts[] = $post;
     }
+    return $posts;
 }
 
 function ob_posts_aside() {
     global $mysqli;
-    $stmt = $mysqli->prepare("SELECT id,category,image,title,date FROM posts WHERE category='Entretenimiento' ORDER BY views DESC LIMIT 6");
-    $stmt->execute();
-    if ($stmt->num_rows >= 1) {
-        $result = $stmt->get_result();
-        $posts = array();
-        while ($post = $result->fetch_array()) {
-            $post["date"] = ob_tiempo_transcurrido($post["date"]);
-            $posts[] = $post;
-        }
-        return $posts;
+    $result = $mysqli->query("SELECT id,category,image,title,date FROM posts WHERE category='Entretenimiento' ORDER BY views DESC LIMIT 6");
+    $posts = array();
+    while ($post = $result->fetch_array()) {
+        $post["date"] = ob_tiempo_transcurrido($post["date"]);
+        $posts[] = $post;
     }
+    return $posts;
 }
 
 
 function ob_posts_views_cate($category) {
     global $mysqli;
-    $stmt = $mysqli->prepare("SELECT id,category,user,image,title,date FROM posts WHERE category=? ORDER BY views DESC LIMIT 2");
-    $stmt->bind_param("s", $category);
-    $stmt->execute();
-    if ($stmt->num_rows >= 1) {
-        $result = $stmt->get_result();
-        $posts = array();
-        while ($post = $result->fetch_array()) {
-            $post["date"] = ob_tiempo_transcurrido($post["date"]);
-            $posts[] = $post;
-        }
-        return $posts;
+    $result = $mysqli->query("SELECT id,category,user,image,title,date FROM posts WHERE category='$category' ORDER BY views DESC LIMIT 2");
+    $posts = array();
+    while ($post = $result->fetch_array()) {
+        $post["date"] = ob_tiempo_transcurrido($post["date"]);
+        $posts[] = $post;
     }
+    return $posts;
 }
 
 

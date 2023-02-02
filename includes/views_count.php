@@ -5,13 +5,10 @@ $url = $_POST["url"];
 $array = explode("/", $url);
 $id = $array[4];
 if(empty($id)) {
-    $stmt = $mysqli->prepare("UPDATE site SET views=views+1 WHERE name='stlab'");
-    $stmt->execute();
+    $mysqli->query("UPDATE site SET views=views+1 WHERE name='stlab'");
     return "success";
 } else {
-    $stmt = $mysqli->prepare("UPDATE posts SET views=views+1 WHERE id=?");
-    $stmt->bind_param("i", $id);
-    $stmt->execute();
+    $mysqli->query("UPDATE posts SET views=views+1 WHERE id=$id");
     return "success";
 }
 ?>

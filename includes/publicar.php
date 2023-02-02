@@ -17,16 +17,14 @@ if(empty($image["name"]) or empty($title) or empty($content)) {
         $title = str_replace(" ","-",$title);
         $content = htmlspecialchars($content);
 
-        
-        $car = array("&lt;","&gt;","&quot;");
-        $rem = array("<",">","\"");
-
+        $car = array("[img=","]");
+        $rem = array("<img src=",">");
         $content = str_replace($car, $rem, $content);
         $result = upload_post($category,$user,$img,$title,$content);
         if($result == "success") {
             echo "success";
         }else {
-            echo "error al subir el post";
+            echo "error al subir el post: ".$result;
         }
     }
 }
@@ -46,12 +44,9 @@ function upload_image($title,$image) {
 
 function upload_post($category,$user,$image,$title,$content) {
     global $mysqli;
-    $stmt = $mysqli->prepare("INSERT INTO posts(category,image,user,title,content)VALUES(?,?,?,?,?)");
-    $stmt->bind_param("sssss", $category, $image, $user, $title, $content);
-    $stmt->execute();
-    $stmt->get_result();
-    if($stmt->error) {
-        return "err";
+    $mysqli->query("INSERT INTO posts(category,image,user,title,content)VALUES('$category','$image','$user','$title','$content')");
+    if($mysqli->error) {
+        return $mysqli->error;
     } else {
         return "success";
     }

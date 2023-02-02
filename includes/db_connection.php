@@ -1,12 +1,12 @@
 <?php
 require_once("config.php");
 $host = "localhost";
-$user = "stlab";
-$pass = "acoer1cstadb";
+$user = "root";
+$pass = "";
 $db_name = "stlab";
 $mysqli = new mysqli($host, $user, $pass, $db_name);
-if($mysqli->error) {
-    echo $mysqli->error;
+if($mysqli->connect_errno) {
+    echo $mysqli->connect_errno;
 }
 
 
