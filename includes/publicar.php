@@ -17,8 +17,8 @@ if(empty($image["name"]) or empty($title) or empty($content)) {
         $title = str_replace(" ","-",$title);
         $content = htmlspecialchars($content);
 
-        $car = array("[img=","]","[");
-        $rem = array("<img src=",">","<");
+        $car = array("[video=","[a=","[img=","]","[");
+        $rem = array("<video controls src=","<a href=","<img src=",">","<");
         $content = str_replace($car, $rem, $content);
         $result = upload_post($category,$user,$img,$title,$content);
         if($result == "success") {

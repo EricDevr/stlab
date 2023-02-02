@@ -31,15 +31,20 @@
     word-break: break-word;
     margin: 0;
 }
-.content-post > img {
+.content-post video {
+    position: relative;
+    width: 100%;
+}
+.content-post img {
     position: relative;
     display: block;
     width: 100%;
 }
-.content-post > a {
+.content-post a {
     position: relative;
+    text-decoration: none;
     font-weight: 900;
-    color: #945;
+    color: #069;
 }
 
 .comments {
