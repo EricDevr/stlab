@@ -22,7 +22,7 @@
         const textini = textarea.value.substring(0, ini);
         const textfin = textarea.value.substring(fin, textarea.value.length);
         const stri = textarea.value.substring(ini, fin);
-        const bbco = "<" + code + ">" + stri + "</" + code + ">";
+        const bbco = "[" + code + "]" + stri + "[/" + code + "]";
         const texto = textini + bbco + textfin;
         textarea.value = texto;
     }
@@ -65,7 +65,7 @@
         const fin = textarea.selectionEnd;
         const textini = textarea.value.substring(0, ini);
         const textfin = textarea.value.substring(fin, textarea.value.length);
-        const image = "<img src=\""+image_lnk+"\">";
+        const image = "[img="+image_lnk+"]";
         const new_text = textini + image + textfin;
         textarea.value = new_text;
         
